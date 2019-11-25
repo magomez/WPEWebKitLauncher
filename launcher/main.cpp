@@ -164,6 +164,7 @@ int main(int argc, char* argv[])
 
     auto page = WKViewGetPage(view);
     WKPageSetPageNavigationClient(page, &s_navigationClient.base);
+    WKPageSetProxies(page, nullptr);
 
     const char* url = "http://youtube.com/tv";
     if (argc > 1)
